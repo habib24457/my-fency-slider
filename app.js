@@ -96,17 +96,6 @@ const createSlider = (duration) => {
   slideChangeTimer();
 }
 
-//my shitty code here...............................................
-// function slideChangeTimer(duration){
-//   changeSlide(0)
-//   timer = setInterval(function () {
-//     slideIndex++;
-//     changeSlide(slideIndex);
-//   }, duration);
-// }
-
-
-
 // change slider index 
 const changeItem = index => {
   changeSlide(slideIndex += index);
@@ -146,8 +135,6 @@ searchBtn.addEventListener('click', function () {
   getImages(search.value);
   sliders.length = 0;
 })
-
-
 
 sliderBtn.addEventListener('click', function () {
   const timeDuration = document.getElementById('duration').value || 1000;
