@@ -52,11 +52,12 @@ const selectItem = (event, img) => {
     element.classList.remove('added');
   }
 }
+
+
 var timer
 
 /**creating slider */
 const createSlider = (duration) => {
-  
   // check slider image length
   if (sliders.length < 2) {
     alert('Select at least 2 image.')
@@ -91,7 +92,19 @@ const createSlider = (duration) => {
     slideIndex++;
     changeSlide(slideIndex);
   }, duration);
+
+  slideChangeTimer();
 }
+
+//my shitty code here...............................................
+// function slideChangeTimer(duration){
+//   changeSlide(0)
+//   timer = setInterval(function () {
+//     slideIndex++;
+//     changeSlide(slideIndex);
+//   }, duration);
+// }
+
 
 
 // change slider index 
@@ -143,7 +156,7 @@ sliderBtn.addEventListener('click', function () {
     document.getElementById('duration').value = '';
     return;
   }else{
-    createSlider(timeDuration);
+    createSlider(timeDuration);   
   }
   
 })
